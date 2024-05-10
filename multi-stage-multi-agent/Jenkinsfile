@@ -17,5 +17,13 @@ pipeline {
         sh 'node --version'
       }
     }
+    stage('try') {
+      agent {
+        docker { 'image Python 3' }
+      }
+      steps {
+        sh 'python3 --version'
+      }
+    }
   }
 }
