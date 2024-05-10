@@ -19,7 +19,7 @@ pipeline {
     }
     stage('try') {
       agent {
-        docker { 'image Python 3' }
+        docker { image 'Python: 3' }
       }
       steps {
         sh 'python3 --version'
